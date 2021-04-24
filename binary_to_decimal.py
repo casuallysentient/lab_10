@@ -32,7 +32,6 @@ def binary_to_hex(binary_list):
         if digits_checked == 4:
             segment = hex_converter[segment]
             translation += str(segment)
-            print(segment)
             digits_checked = 0
             segment = ""
     return translation
