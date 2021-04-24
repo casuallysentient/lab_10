@@ -65,6 +65,8 @@ def decode_caesar(encoded_message, key):
     reversed_alphabet = {value: key for (key, value) in alphabet.items()}
 
     decoded_message = ""
+    if key >= 26:
+        key = key % 26
     for char in encoded_message:
         if char.isalpha():
             code = alphabet[char] - key
