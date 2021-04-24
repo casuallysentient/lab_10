@@ -5,7 +5,13 @@ class Point:
     """
     Your class definition below! Remember to get rid of the pass keyword.
     """
-    pass
+    def __init__(self, x_coord, y_coord):
+        self.x_coord = x_coord
+        self.y_coord = y_coord
+
+    def get_distance(self, point_2):
+        distance = (((point_2.x_coord - self.x_coord) ** 2) + ((point_2.y_coord - self.y_coord) ** 2)) ** 0.5
+        return distance
 
 
 def main():
@@ -26,18 +32,18 @@ def main():
     MAKE SURE THE THE CODE ABOVE WORKS BEFORE MOVING ON! Then you can uncomment the next section below.
     """
 
-    # # Calculating the distance between them according to their respective coordinates
-    # # You could have also called the get_distance() method of point_2. Both ways yield the same answer
-    # distance = point_1.get_distance(point_2)
-    #
-    # # Printing our rounded result
-    # print("The distance between these two points is ~{}".format(round(distance, 3)))
-    #
-    # some_point = Point(4, 5.6)
-    # other_point = Point(10, 29.3)
-    #
-    # distance = some_point.get_distance(other_point)
-    # print(distance)
+    # Calculating the distance between them according to their respective coordinates
+    # You could have also called the get_distance() method of point_2. Both ways yield the same answer
+    distance = point_1.get_distance(point_2)
+
+    # Printing our rounded result
+    print("The distance between these two points is ~{}".format(round(distance, 3)))
+
+    some_point = Point(4, 5.6)
+    other_point = Point(10, 29.3)
+
+    distance = some_point.get_distance(other_point)
+    print(distance)
 
 # DO NOT WRITE CODE BELOW THIS LINE
 
