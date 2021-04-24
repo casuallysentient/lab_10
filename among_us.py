@@ -9,7 +9,11 @@ def is_impostor(information, corrupter_function):
     :param corrupter_function: A function that returns either a deep or shallow copy of the object passed onto it.
     :return: True or False
     """
-    pass
+    copy = corrupter_function(information)
+    copy["Members"]["Guitarist"] = "your mom"
+    if copy["Members"]["Guitarist"] == information["Members"]["Guitarist"]:
+        return False
+    return True
 
 
 def main():
